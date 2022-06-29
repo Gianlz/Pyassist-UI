@@ -4,10 +4,9 @@ import numpy as np
 import win32api
 import serial
 import os
-from main import *
 
 
-def Colaim(fov, value):
+def Colaim(fov, var):
     os.system("cls")
     '''
         TODO 
@@ -30,10 +29,9 @@ def Colaim(fov, value):
     lower = np.array([140,111,160])
     upper = np.array([148,154,194])
 
+    print("Running!, press", var ,"to aim")
 
-    xspeed = float(input("X Speed (Default 0.1) :"))
-    yspeed = float(input("Y Speed (Default 0.1) :"))
-    print("Running!, press Ctrl to aim")
+
 
     def mousemove(x,y):
         if x < 0: 
@@ -46,7 +44,7 @@ def Colaim(fov, value):
 
 
     while True:
-        if win32api.GetAsyncKeyState(value) < 0:
+        if win32api.GetAsyncKeyState(var) < 0:
             
             img = np.array(sct.grab(screenshot))
             hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
