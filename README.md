@@ -25,3 +25,5 @@ TODO:
 - Arrumar a integração do coloraim com o main.py
 
 //Otimização de código.//
+
+Código Finalizado porém não vou disponibilizar a versão finalizada, pois pode ser usado de má fé, atrapalhando jogos online.
